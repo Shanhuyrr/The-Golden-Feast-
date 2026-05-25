@@ -344,6 +344,218 @@ p {
   margin: 0 auto;
 }
 
+/* Branches Section */
+.branches-view-container {
+  padding: 40px 0;
+}
+
+.branches-list-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.branch-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.branch-image-container {
+  position: relative;
+  height: 100%;
+  min-height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.branch-location-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+
+.branch-image-container:hover .branch-location-image {
+  transform: scale(1.05);
+}
+
+.branch-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(10, 10, 13, 0.7) 0%, rgba(10, 10, 13, 0.3) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  z-index: 2;
+}
+
+.branch-image-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.branch-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.branch-detail-row {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.branch-detail-icon {
+  color: var(--primary-gold);
+  flex-shrink: 0;
+  margin-top: 3px;
+  width: 20px;
+  height: 20px;
+}
+
+.detail-lbl {
+  color: var(--primary-gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.branch-info-section p {
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  min-height: 300px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.route-calculator {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(197, 168, 92, 0.05);
+  border-radius: 8px;
+}
+
+.route-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.route-form input {
+  flex: 1;
+  padding: 10px 15px;
+  background: rgba(20, 20, 30, 0.6);
+  border: 1px solid rgba(197, 168, 92, 0.3);
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.route-form input:focus {
+  outline: none;
+  border-color: var(--primary-gold);
+  box-shadow: 0 0 8px rgba(197, 168, 92, 0.2);
+}
+
+.route-form button {
+  background: var(--primary-gold);
+  color: var(--bg-dark);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition-smooth);
+}
+
+.route-form button:hover {
+  background: var(--primary-gold-hover);
+  transform: translateY(-2px);
+}
+
+.route-result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.route-result h4 {
+  grid-column: 1 / -1;
+  color: var(--primary-gold);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.route-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  padding: 10px;
+  background: rgba(197, 168, 92, 0.05);
+  border-left: 3px solid var(--primary-gold);
+  border-radius: 4px;
+}
+
+/* Reservation Form Enhancements */
+.reservation-form-wrapper {
+  background: linear-gradient(135deg, rgba(197, 168, 92, 0.08) 0%, rgba(197, 168, 92, 0.12) 100%);
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.reservation-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(20, 20, 30, 0.6) !important;
+  border: 1px solid rgba(197, 168, 92, 0.4) !important;
+  color: #ffffff !important;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-gold) !important;
+  box-shadow: 0 0 12px rgba(197, 168, 92, 0.3) !important;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   :root {
@@ -355,5 +567,14 @@ p {
   .btn-gold, .btn-outline {
     padding: 10px 20px;
     font-size: 0.85rem;
+  }
+  
+  .branch-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .reservation-form-grid {
+    grid-template-columns: 1fr;
   }
 }
