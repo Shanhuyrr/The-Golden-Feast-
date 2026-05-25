@@ -59,9 +59,19 @@ export default function Branches({ currentLang }) {
       <div className="branches-list-grid">
         {branchesData.map((branch) => (
           <div key={branch.id} className="branch-card glass-panel">
+            {/* Location Image */}
+            <div className="branch-image-container">
+              <img 
+                src={branch.locationImage} 
+                alt={t[branch.nameKey]}
+                className="branch-location-image"
+              />
+              <div className="branch-image-overlay">
+                <h2 className="text-gold branch-image-title">{t[branch.nameKey]}</h2>
+              </div>
+            </div>
+
             <div className="branch-info-section">
-              <h2 className="text-gold">{t[branch.nameKey]}</h2>
-              
               <div className="branch-detail-row">
                 <MapPin className="branch-detail-icon" />
                 <div>
@@ -193,22 +203,48 @@ export default function Branches({ currentLang }) {
         }
         .branch-card {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
           gap: 30px;
           padding: 30px;
           align-items: stretch;
+          overflow: hidden;
+        }
+        .branch-image-container {
+          position: relative;
+          min-height: 300px;
+          border-radius: 8px;
+          overflow: hidden;
+          border: 2px solid rgba(197, 168, 92, 0.3);
+        }
+        .branch-location-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.6s ease;
+        }
+        .branch-image-container:hover .branch-location-image {
+          transform: scale(1.05);
+        }
+        .branch-image-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(197, 168, 92, 0.2) 100%);
+          display: flex;
+          align-items: flex-end;
+          padding: 20px;
+          border-radius: 8px;
+        }
+        .branch-image-title {
+          font-size: 1.6rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
         .branch-info-section {
           display: flex;
           flex-direction: column;
           gap: 25px;
           text-align: left;
-        }
-        .branch-info-section h2 {
-          font-size: 1.8rem;
-          text-transform: uppercase;
-          border-bottom: 1px solid rgba(197, 168, 92, 0.15);
-          padding-bottom: 12px;
         }
         .branch-detail-row {
           display: flex;

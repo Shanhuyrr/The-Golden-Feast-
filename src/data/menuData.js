@@ -782,7 +782,8 @@ export const branchesData = [
     },
     lat: 33.7294,
     lng: 73.0697,
-    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3319.4674751475713!2d73.0697!3d33.7294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf9df1f4df4f%3A0xe541c499879796e9!2sBlue%20Area%2C%20Islamabad!5e0!3m2!1sen!2spk!4v1680000000000!5m2!1sen!2spk"
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3319.4674751475713!2d73.0697!3d33.7294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf9df1f4df4f%3A0xe541c499879796e9!2sBlue%20Area%2C%20Islamabad!5e0!3m2!1sen!2spk!4v1680000000000!5m2!1sen!2spk",
+    locationImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80&auto=format"
   },
   {
     id: "branch-wah",
@@ -796,7 +797,8 @@ export const branchesData = [
     },
     lat: 33.7744,
     lng: 72.7175,
-    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3317.0674751475713!2d72.7175!3d33.7744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfa2dfdfdfdfdf%3A0xe541c499879796e9!2sWah%20Cantt%2C%20Rawalpindi%2C%20Punjab!5e0!3m2!1sen!2spk!4v1680000000001!5m2!1sen!2spk"
+    mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3317.0674751475713!2d72.7175!3d33.7744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfa2dfdfdfdfdf%3A0xe541c499879796e9!2sWah%20Cantt%2C%20Rawalpindi%2C%20Punjab!5e0!3m2!1sen!2spk!4v1680000000001!5m2!1sen!2spk",
+    locationImage: "https://images.unsplash.com/photo-1604914212300-5f1b5c1eae4b?w=800&q=80&auto=format"
   }
 ];
 

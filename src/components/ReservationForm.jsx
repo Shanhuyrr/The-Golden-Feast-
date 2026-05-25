@@ -220,6 +220,12 @@ export default function ReservationForm({ currentLang, currentUser, addReservati
         .reservation-form-wrapper {
           max-width: 900px;
           margin: 0 auto;
+          background: linear-gradient(135deg, rgba(197, 168, 92, 0.08) 0%, rgba(197, 168, 92, 0.12) 100%) !important;
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(197, 168, 92, 0.25) !important;
+          box-shadow: inset 0 0 20px rgba(197, 168, 92, 0.05);
+          padding: 40px;
+          border-radius: 12px;
         }
         .form-grid-columns {
           display: grid;
@@ -241,6 +247,18 @@ export default function ReservationForm({ currentLang, currentUser, addReservati
         }
         .form-input, .form-select {
           padding-left: 45px;
+          background-color: rgba(20, 20, 30, 0.6) !important;
+          border: 1px solid rgba(197, 168, 92, 0.4) !important;
+          color: #ffffff !important;
+          transition: all 0.3s ease;
+        }
+        .form-input:focus, .form-select:focus {
+          background-color: rgba(20, 20, 30, 0.8) !important;
+          border-color: rgba(197, 168, 92, 0.7) !important;
+          box-shadow: 0 0 15px rgba(197, 168, 92, 0.2) !important;
+        }
+        .form-input::placeholder {
+          color: rgba(255, 255, 255, 0.5) !important;
         }
         .date-input::-webkit-calendar-picker-indicator {
           filter: invert(0.7) sepia(1) saturate(5) hue-rotate(5deg);
